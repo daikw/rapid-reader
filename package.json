@@ -1,0 +1,31 @@
+{
+  "name": "rapid-reader",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daikw/rapid-reader.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/daikw/rapid-reader/issues"
+  },
+  "homepage": "https://github.com/daikw/rapid-reader#readme",
+  "dependencies": {
+    "@material-ui/core": "^3.9.1",
+    "next": "^7.0.2",
+    "prop-types": "^15.6.2",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "react-jss": "^8.6.1"
+  }
+}
