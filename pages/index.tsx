@@ -12,6 +12,9 @@ import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
 import Link from 'next/link';
 
+// Components
+import DefaultLayout from '~/components/layouts/default'
+
 const styles = theme => ({
   root: {
     textAlign: 'center',
@@ -67,6 +70,9 @@ class Index extends React.Component {
         <Button variant="contained" color="secondary" onClick={this.handleClick}>
           Super Secret Password
         </Button>
+        <DefaultLayout>
+          <p>welcome to next.js!</p>
+        </DefaultLayout>
       </div>
     );
   }
