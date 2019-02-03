@@ -5,8 +5,6 @@ import flush from 'styled-jsx/server';
 
 class MyDocument extends Document {
   render() {
-    const { pageContext } = this.props;
-
     return (
       <html lang="en" dir="ltr">
         <Head>
@@ -19,7 +17,6 @@ class MyDocument extends Document {
           {/* PWA primary color */}
           <meta
             name="theme-color"
-            content={pageContext ? pageContext.theme.palette.primary.main : null}
           />
           <link
             rel="stylesheet"
