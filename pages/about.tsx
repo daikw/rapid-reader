@@ -1,18 +1,19 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
-
 import React from 'react';
 import PropTypes from 'prop-types';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-import { withStyles } from '@material-ui/core/styles';
+import { Theme } from '@material-ui/core/styles/createMuiTheme';
+import withStyles from '@material-ui/core/styles/withStyles';
+import createStyles from '@material-ui/core/styles/createStyles';
 import Link from 'next/link';
 
-const styles = theme => ({
-  root: {
-    textAlign: 'center',
-    paddingTop: theme.spacing.unit * 20,
-  },
-});
+const styles = (theme: Theme) =>
+  createStyles({
+    root: {
+      textAlign: 'center',
+      paddingTop: theme.spacing.unit * 20,
+    },
+  });
 
 function About(props) {
   const { classes } = props;
