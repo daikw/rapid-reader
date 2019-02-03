@@ -2,11 +2,9 @@
 
 ## How to use
 
-Clone the repo:
-
+Clone this repo:
 ```sh
-curl https://codeload.github.com/mui-org/material-ui/tar.gz/master | tar -xz --strip=2  material-ui-master/examples/nextjs
-cd nextjs
+git clone https://github.com/daikw/rapid-reader/
 ```
 
 Install it and run:
@@ -16,6 +14,12 @@ npm install
 npm run dev
 ```
 
-## The idea behind the example
+## Technology stack
 
-[Next.js](https://github.com/zeit/next.js) is a framework for server-rendered React apps.
+| Name | Description |
+----|---- 
+| [Next.js](https://github.com/zeit/next.js) | a framework for server-rendered React apps |
+| [React](https://reactjs.org/) | Component-based frontend framework |
+| [Redux](https://redux.js.org/) | A predictable state container for JavaScript apps |
+| [TypeScript](https://www.typescriptlang.org/) | The typed superset of JS that compiles to plain JS |
+| [Material-UI](https://material-ui.com/) | React components library that implement Google's material design |
