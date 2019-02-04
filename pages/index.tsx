@@ -74,6 +74,13 @@ class Index extends React.Component<WithStyles<typeof styles>, State> {
         <Button variant="contained" color="secondary" onClick={this.handleClick}>
           Super Secret Password
         </Button>
+
+        <Button variant="contained" color="primary">
+          <Link href="/dashboard">
+            <a>Go to the dashboard</a>
+          </Link>
+        </Button>
+
         <DefaultLayout>
           <p>welcome to next.js!</p>
         </DefaultLayout>
