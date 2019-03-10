@@ -7,19 +7,40 @@ export interface IFlashCardProps {
 
 export interface IFlashCardState {
   index: number
+  flashing: boolean
+}
+
+function sleep(ms: number) {
+  return new Promise((resolve) => setTimeout(resolve, ms))
 }
 
 class FlashCard extends React.Component<IFlashCardProps, IFlashCardState> {
   constructor(props: IFlashCardProps, context?: any) {
     super(props, context)
-    this.state = { index: 0 }
+    this.state = {
+      flashing: false,
+      index: 0,
+    }
 
     // binding implicitly (required in the ES6-React combination)
-    this.incrementWord = this.incrementWord.bind(this)
+    this.onClick = this.onClick.bind(this)
   }
 
-  public incrementWord() {
-    this.setState({ index: this.state.index + 1 })
+  public onClick() {
+    this.toggleWordFlashing().then(() => this.incrementWord())
+  }
+
+  public async toggleWordFlashing() {
+    await this.setState({ flashing: !this.state.flashing })
+  }
+
+  public async incrementWord() {
+    while (this.state.flashing) {
+      this.setState({
+        index: (this.state.index + 1) % this.props.words.length,
+      })
+      await sleep(100)
+    }
   }
 
   public render() {
@@ -31,7 +52,7 @@ class FlashCard extends React.Component<IFlashCardProps, IFlashCardState> {
         <h1>
           <span>{words[index]}</span>
         </h1>
-        <button onClick={this.incrementWord}>change the word</button>
+        <button onClick={this.onClick}>start</button>
       </div>
     )
   }
