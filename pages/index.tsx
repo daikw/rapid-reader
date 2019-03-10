@@ -12,6 +12,7 @@ import Link from "next/link"
 import React from "react"
 
 // Components
+import FlashCard from "~/components/layouts/flashcard"
 
 const styles = (theme: Theme) =>
   createStyles({
@@ -45,6 +46,9 @@ class Index extends React.Component<WithStyles<typeof styles>, IState> {
   public render() {
     const { classes } = this.props
     const { open } = this.state
+    const text =
+      "business,campaign,company,cost,deal,department,discount,information,job,leader,meeting,member,offer,office,order,plan,practice,price,raise,record,role,sale,service,share,account,bill,bonus,capital,career,cash,cent,challenge,charge,coin,debt,dollar,economy,estimate,fair,fee,firm,fund,goods,income,interview,labor,leadership,network,notice,penny,post,profit,project,salary,schedule,task,trade,value,wage,yen,agency,agent,announcement,appointment,background,budget,commercial,contract,credit,equipment,expense,guarantee,incentive,instruction,load,management,membership,payment,permission,progress,proposal,receipt,recommendation,regulation,signature,source,suggestion,survey,undertaking,venture,achievement,advertisement,asset,bid,boom,commerce,commission,construction,consumption,cooperation,corporation,currency,deflation,demonstration,deposit,developer,dime,discharge,distribution,dividend,earnings,employment,enterprise,establishment,euro,export,finance,headquarters,import,inflation,inquiry,investment,lease,loan,margin,monopoly,mortgage,negotiation,outlet,personnel,pool,presentation,privilege,procedure,promotion,property,proposition,recession,reduction,registration,representation,retail,retirement,revenue,reward,scope,supervision,supply,turnover,accomplishment,accounting,advertiser,agenda,alliance,allowance,assignment,assurance,banking,bond,builder,cancellation,counseling,dealing,deficit,disapproval,dismissal,distributor,feedback,innovation,invoice,marketing,marketplace,memorandum,motivation,overhead,overtime,partnership,policy,questionnaire,rental,retailer,seminar,shipment,specialty,sponsor,supplier,transaction,wholesale,broker,contractor,discourse,equity,estimation,expenditure,fishery,freight,inventory,layoff,merchandise,merger,planning,query,quota,renewal,resignation,resume,shareholder,subsidiary,supervisor,takeover,tariff,trademark,treasurer,vacancy,vendor,voucher,warranty,workplace,auditor,automation,backlog,bestseller,billboard,boardroom,bookkeeping,businessperson,buyout,conglomerate,consignment,consortium,consultancy,consulting,contraction,cutback,deadlock,dealership,deduction,default,designation,downsizing,e-commerce,flextime,franchise,logistics,niche,orientation,outlay,paperwork,paycheck,payday,payroll,paystub,premium,pricing,procurement,relocation,remuneration,restructuring,self-employment,specification,start-up,stockholder,syndicate,tally,turnaround,validity,valuation,videoconference,workflow,workforce,workload,workweek"
+    const words = text.split(",")
 
     return (
       <div className={classes.root}>
@@ -83,6 +87,8 @@ class Index extends React.Component<WithStyles<typeof styles>, IState> {
             <a>Go to the dashboard</a>
           </Link>
         </Button>
+
+        <FlashCard words={words} />
       </div>
     )
   }
