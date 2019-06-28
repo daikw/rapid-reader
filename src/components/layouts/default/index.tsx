@@ -1,12 +1,14 @@
-interface DefaultLayoutProps {
-    children: React.ReactNode
+interface IDefaultLayoutProps {
+  children: React.ReactNode
 }
 
-const DefaultLayout: React.SFC<DefaultLayoutProps> = (props: DefaultLayoutProps) => {
+const DefaultLayout: React.SFC<IDefaultLayoutProps> = (
+  props: IDefaultLayoutProps
+) => {
   return (
     <div>
       <header>header</header>
-      { props.children }
+      {props.children}
       <footer>footer</footer>
     </div>
   )
