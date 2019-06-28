@@ -12,7 +12,6 @@ import Link from "next/link"
 import React from "react"
 
 // Components
-import DefaultLayout from "~/components/layouts/default"
 
 const styles = (theme: Theme) =>
   createStyles({
@@ -84,10 +83,6 @@ class Index extends React.Component<WithStyles<typeof styles>, IState> {
             <a>Go to the dashboard</a>
           </Link>
         </Button>
-
-        <DefaultLayout>
-          <p>welcome to next.js!</p>
-        </DefaultLayout>
       </div>
     )
   }
