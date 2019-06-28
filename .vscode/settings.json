@@ -1,4 +1,10 @@
 {
-    "files.insertFinalNewline": true,
-    "tslint.autoFixOnSave": true,
+  "files.insertFinalNewline": true,
+  "eslint.autoFixOnSave": true,
+  //   "tslint.autoFixOnSave": true,
+  "prettier.eslintIntegration": true,
+  "prettier.tslintIntegration": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.tslint": true
+  }
 }
