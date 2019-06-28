@@ -1,3 +1,3 @@
-import DefaultLayout from '~/components/layouts/default'
+import DefaultLayout from "~/components/layouts/default"
 
 export default DefaultLayout

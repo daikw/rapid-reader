@@ -1,10 +1,10 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Document, { Head, Main, NextScript } from 'next/document';
-import flush from 'styled-jsx/server';
+import Document, { Head, Main, NextScript } from "next/document"
+import PropTypes from "prop-types"
+import React from "react"
+import flush from "styled-jsx/server"
 
 class MyDocument extends Document {
-  static async getInitialProps(ctx) {
+  public static async getInitialProps(ctx) {
     // Resolution order
     //
     // On the server:
@@ -26,28 +26,28 @@ class MyDocument extends Document {
     // 2. page.getInitialProps
     // 3. app.render
     // 4. page.render
-  
+
     // Render app and page and get the context of the page with collected side effects.
-    let pageContext;
-    const page = ctx.renderPage(Component => {
-      const WrappedComponent = props => {
-        pageContext = props.pageContext;
-        return <Component {...props} />;
-      };
-  
+    let pageContext
+    const page = ctx.renderPage((Component) => {
+      const WrappedComponent = (props) => {
+        pageContext = props.pageContext
+        return <Component {...props} />
+      }
+
       WrappedComponent.propTypes = {
         pageContext: PropTypes.object.isRequired,
-      };
-  
-      return WrappedComponent;
-    });
-  
-    let css;
+      }
+
+      return WrappedComponent
+    })
+
+    let css
     // It might be undefined, e.g. after an error.
     if (pageContext) {
-      css = pageContext.sheetsRegistry.toString();
+      css = pageContext.sheetsRegistry.toString()
     }
-  
+
     return {
       ...page,
       pageContext,
@@ -62,10 +62,10 @@ class MyDocument extends Document {
           {flush() || null}
         </React.Fragment>
       ),
-    };
-  };
+    }
+  }
 
-  render() {
+  public render() {
     return (
       <html lang="en" dir="ltr">
         <Head>
@@ -76,9 +76,7 @@ class MyDocument extends Document {
             content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no"
           />
           {/* PWA primary color */}
-          <meta
-            name="theme-color"
-          />
+          <meta name="theme-color" />
           <link
             rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Roboto:300,400,500"
@@ -89,8 +87,8 @@ class MyDocument extends Document {
           <NextScript />
         </body>
       </html>
-    );
+    )
   }
 }
 
-export default MyDocument;
+export default MyDocument
