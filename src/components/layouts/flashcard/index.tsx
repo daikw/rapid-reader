@@ -26,23 +26,6 @@ class FlashCard extends React.Component<IFlashCardProps, IFlashCardState> {
     this.onClick = this.onClick.bind(this)
   }
 
-  public onClick() {
-    this.toggleWordFlashing().then(() => this.incrementWord())
-  }
-
-  public async toggleWordFlashing() {
-    await this.setState({ flashing: !this.state.flashing })
-  }
-
-  public async incrementWord() {
-    while (this.state.flashing) {
-      this.setState({
-        index: (this.state.index + 1) % this.props.words.length,
-      })
-      await sleep(100)
-    }
-  }
-
   public render() {
     const { words } = this.props
     const { index } = this.state
@@ -55,6 +38,23 @@ class FlashCard extends React.Component<IFlashCardProps, IFlashCardState> {
         <button onClick={this.onClick}>start</button>
       </div>
     )
+  }
+
+  private onClick() {
+    this.toggleWordFlashing().then(() => this.incrementWord())
+  }
+
+  private async toggleWordFlashing() {
+    await this.setState({ flashing: !this.state.flashing })
+  }
+
+  private async incrementWord() {
+    while (this.state.flashing) {
+      this.setState({
+        index: (this.state.index + 1) % this.props.words.length,
+      })
+      await sleep(100)
+    }
   }
 }
 
