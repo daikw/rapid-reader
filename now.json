@@ -1,7 +1,0 @@
-{
-    "version": 2,
-    "name": "rapid-reader",
-    "builds": [
-        { "src": "package.json", "use": "@now/next" }
-    ]
-}
