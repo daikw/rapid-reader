@@ -6,12 +6,12 @@
 importScripts('https://www.gstatic.com/firebasejs/5.4.1/firebase-app.js')
 importScripts('https://www.gstatic.com/firebasejs/5.4.1/firebase-messaging.js')
 
-const PROD_MESSAGING_ID = '576188057687'
+const PROD_MESSAGING_ID = '664223594408'
 const STAGE_MESSAGING_ID = '' // TODO: Set your staging messaging ID here
 /* eslint-disable prettier/prettier */
 firebase.initializeApp({
   // Use prod id if stage id not defined or running on prod Firebase hosting
-  messagingSenderId: !STAGE_MESSAGING_ID || self.location.hostname.includes('material-test-6b43b')
+  messagingSenderId: !STAGE_MESSAGING_ID || self.location.hostname.includes('rapid-reader-52251')
     ? PROD_MESSAGING_ID
     : STAGE_MESSAGING_ID
 })

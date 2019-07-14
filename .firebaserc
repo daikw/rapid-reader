@@ -1,8 +1,8 @@
 {
   "projects": {
-    "default": "material-test-6b43b",
-    "master": "material-test-6b43b",
-    "prod": "material-test-6b43b"
+    "default": "rapid-reader-52251",
+    "master": "rapid-reader-52251",
+    "prod": "rapid-reader-52251"
   },
   "ci": {
     "copyVersion": true,
@@ -11,11 +11,11 @@
         "env": "staging",
         "firebase": {
           "apiKey": "${STAGE_FIREBASE_API_KEY}",
-          "authDomain": "material-test-6b43b.firebaseapp.com",
-          "databaseURL": "https://material-test-6b43b.firebaseio.com",
-          "projectId": "material-test-6b43b",
-          "storageBucket": "material-test-6b43b.appspot.com",
-          "messagingSenderId": "576188057687"
+          "authDomain": "rapid-reader-52251.firebaseapp.com",
+          "databaseURL": "https://rapid-reader-52251.firebaseio.com",
+          "projectId": "rapid-reader-52251",
+          "storageBucket": "rapid-reader-52251.appspot.com",
+          "messagingSenderId": "664223594408"
         },
         "sentryDsn": "${SENTRY_DSN}",
         "analyticsTrackingId": "${GA_TRACKING_ID}"
@@ -24,11 +24,11 @@
         "env": "production",
         "firebase": {
           "apiKey": "${PROD_FIREBASE_API_KEY}",
-          "authDomain": "material-test-6b43b.firebaseapp.com",
-          "databaseURL": "https://material-test-6b43b.firebaseio.com",
-          "projectId": "material-test-6b43b",
-          "storageBucket": "material-test-6b43b.appspot.com",
-          "messagingSenderId": "576188057687"
+          "authDomain": "rapid-reader-52251.firebaseapp.com",
+          "databaseURL": "https://rapid-reader-52251.firebaseio.com",
+          "projectId": "rapid-reader-52251",
+          "storageBucket": "rapid-reader-52251.appspot.com",
+          "messagingSenderId": "664223594408"
         },
         "sentryDsn": "${SENTRY_DSN}",
         "analyticsTrackingId": "${GA_TRACKING_ID}"
