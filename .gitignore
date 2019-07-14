@@ -11,6 +11,7 @@
 build
 src/config.js
 .env
+.yo-rc.json
 
 # Functions
 functions/etc
