@@ -1,0 +1,38 @@
+{
+  "projects": {
+    "default": "material-test-6b43b",
+    "master": "material-test-6b43b",
+    "prod": "material-test-6b43b"
+  },
+  "ci": {
+    "copyVersion": true,
+    "createConfig": {
+      "master": {
+        "env": "staging",
+        "firebase": {
+          "apiKey": "${STAGE_FIREBASE_API_KEY}",
+          "authDomain": "material-test-6b43b.firebaseapp.com",
+          "databaseURL": "https://material-test-6b43b.firebaseio.com",
+          "projectId": "material-test-6b43b",
+          "storageBucket": "material-test-6b43b.appspot.com",
+          "messagingSenderId": "576188057687"
+        },
+        "sentryDsn": "${SENTRY_DSN}",
+        "analyticsTrackingId": "${GA_TRACKING_ID}"
+      },
+      "prod": {
+        "env": "production",
+        "firebase": {
+          "apiKey": "${PROD_FIREBASE_API_KEY}",
+          "authDomain": "material-test-6b43b.firebaseapp.com",
+          "databaseURL": "https://material-test-6b43b.firebaseio.com",
+          "projectId": "material-test-6b43b",
+          "storageBucket": "material-test-6b43b.appspot.com",
+          "messagingSenderId": "576188057687"
+        },
+        "sentryDsn": "${SENTRY_DSN}",
+        "analyticsTrackingId": "${GA_TRACKING_ID}"
+      }
+    }
+  }
+}

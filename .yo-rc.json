@@ -1,0 +1,24 @@
+{
+  "generator-react-firebase": {
+    "promptValues": {
+      "githubUser": "daikw",
+      "firebaseName": "material-test-6b43b",
+      "firebaseKey": "AIzaSyDcrv7yzgOA3eI1uYW7nZuy2RqguH4pqU0",
+      "includeRedux": true,
+      "includeFirestore": true,
+      "otherFeatures": [
+        "Continuous Integration config",
+        "Firebase Cloud Messaging",
+        "Firebase Functions (with ESNext support)",
+        "Tests for Firebase Functions (Mocha + Chai)",
+        "Google Analytics (react-ga)",
+        "Error Tracking (Sentry.io)",
+        "Client Side Error Reporting (Stackdriver)"
+      ],
+      "messagingSenderId": "576188057687",
+      "firebasePublicVapidKey": "",
+      "ciProvider": "gitlab",
+      "deployTo": "firebase"
+    }
+  }
+}
