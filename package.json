@@ -33,7 +33,7 @@
     "react-dom": "^16.7.0",
     "react-jss": "^8.6.1",
     "react-redux": "^6.0.0",
-    "recharts": "^1.4.2",
+    "recharts": "^2.1.14",
     "redux": "^4.0.1",
     "styled-jsx": "^3.2.0"
   },
